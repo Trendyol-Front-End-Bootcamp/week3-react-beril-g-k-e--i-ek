@@ -4,13 +4,13 @@ import axios from 'axios';
 
 let rickandmorty_url = "https://rickandmortyapi.com/api/character/";
 
-function CharacterProfilePage(props) {
+function CharacterProfilePage() {
+    //Id of selected character
+    let { id } = useParams();
 
+    const [character, setCharacter] = useState({});
 
-  let { id } = useParams();
-
-  const [character, setCharacter] = useState({});
-
+    //Api request to return single character
     useEffect(() => {
         axios.get(rickandmorty_url + id)
         .then(response => setCharacter(response.data))
@@ -21,6 +21,7 @@ function CharacterProfilePage(props) {
 
     return (
         <div>
+            {/* Character profile card detailed information */}
             <div className="nav-bar"></div>
             <div className="character-profile">
               {console.log(character)}

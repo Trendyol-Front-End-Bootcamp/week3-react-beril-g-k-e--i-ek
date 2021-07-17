@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function CharacterDetails({character}){
     return (
+        //Character card information displayed on the main page
         <div className="character-profile">
             <Link to={`/characters/${character.id}`} key={character.id}>
                 <img src={character.image} alt="Character image"/>

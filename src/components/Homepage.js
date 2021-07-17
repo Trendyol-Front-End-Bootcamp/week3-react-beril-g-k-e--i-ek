@@ -9,11 +9,12 @@ export default function GetCharactersFromApi() {
     const [species, setSpecies] = useState("");
     const [gender, setGender] = useState("");
 
+    //Api request to return filtered results
     useEffect(() => {
         axios.get(`https://rickandmortyapi.com/api/character?status=${status}&gender=${gender}&species=${species}`)
         .then(response => setAllCharacters(response.data.results))
         .catch(error => {
-            throw new Error(error.message);
+            console.log(error.message);
         });
     }, [status, species, gender]);
     
@@ -22,6 +23,7 @@ export default function GetCharactersFromApi() {
         <div>
           <div className="nav-bar "></div>
             <div className="filter-all-buttons">
+                {/* Status filter button group */}
                 <div className="filter-buttons">
                     <p>Status:</p>
                     <button className="filter-button" onClick={() => setStatus("")}>
@@ -37,6 +39,7 @@ export default function GetCharactersFromApi() {
                         Unknown
                     </button>
                 </div>
+                {/* Species filter button group */}
                 <div className="filter-buttons">
                     <p>Species:</p>
                     <button className="filter-button" onClick={() => setSpecies("")}>
@@ -49,6 +52,7 @@ export default function GetCharactersFromApi() {
                         Alien
                     </button>
                 </div>
+                {/* Gender filter button group */}
                 <div className="filter-buttons">
                     <p>Gender:</p>
                     <button className="filter-button" onClick={() => setGender("")}>
@@ -68,6 +72,7 @@ export default function GetCharactersFromApi() {
                     </button>
                 </div>
             </div>
+            {/* Mapping the results to the card information to be displayed */}
             {characters.map((character) => {
                 return (
                     <CharProfile key={character.id} character={character}></CharProfile>
