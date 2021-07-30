@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CharProfile from "./CharacterDetailsCard";
+import {fetchData} from "../services/api";
 
 export default function GetCharactersFromApi() {
 
@@ -11,7 +12,7 @@ export default function GetCharactersFromApi() {
 
     //Api request to return filtered results
     useEffect(() => {
-        axios.get(`https://rickandmortyapi.com/api/character?status=${status}&gender=${gender}&species=${species}`)
+        fetchData(status, species, gender)
         .then(response => setAllCharacters(response.data.results))
         .catch(error => {
             console.log(error.message);
