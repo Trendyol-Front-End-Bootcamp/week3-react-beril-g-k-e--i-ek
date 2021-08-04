@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import CharProfile from "./CharacterDetailsCard";
-import {fetchData} from "../services/api";
+import CharacterCard from "./CharacterCard";
+import { fetchFilterData } from "../services/API";
+import Header from "./Header";
 
 export default function GetCharactersFromApi() {
 
@@ -12,7 +12,7 @@ export default function GetCharactersFromApi() {
 
     //Api request to return filtered results
     useEffect(() => {
-        fetchData(status, species, gender)
+        fetchFilterData(status, species, gender)
         .then(response => setAllCharacters(response.data.results))
         .catch(error => {
             console.log(error.message);
@@ -22,7 +22,7 @@ export default function GetCharactersFromApi() {
     
     return (
         <div>
-          <div className="nav-bar "></div>
+          <Header />
             <div className="filter-all-buttons">
                 {/* Status filter button group */}
                 <div className="filter-buttons">
@@ -76,7 +76,7 @@ export default function GetCharactersFromApi() {
             {/* Mapping the results to the card information to be displayed */}
             {characters.map((character) => {
                 return (
-                    <CharProfile key={character.id} character={character}></CharProfile>
+                    <CharacterCard key={character.id} character={character}></CharacterCard>
                 );
             })}            
         </div>

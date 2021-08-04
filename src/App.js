@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import Homepage from './components/Homepage';
-import CharacterProfilePage from './components/CharacterProfilePage';
+import CharacterCard from './components/CharacterDetailCard';
 import { BrowserRouter as  Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <Switch>
         <Route exact path="/" component={Homepage}/>
-        <Route path="/characters/:id" component={CharacterProfilePage} /> 
+        <Route path="/characters/:id" component={CharacterCard} /> 
       </Switch>
       </div>
     </Router >

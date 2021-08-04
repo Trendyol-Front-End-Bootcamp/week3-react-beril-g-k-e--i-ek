@@ -1,10 +1,9 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import BackHomeButton from './BackHomeButton';
+import { fetchCharacterById } from "../services/API";
 
-let rickandmorty_url = "https://rickandmortyapi.com/api/character/";
-
-function CharacterProfilePage() {
+function CharacterDetailCard() {
     //Id of selected character
     let { id } = useParams();
 
@@ -12,7 +11,7 @@ function CharacterProfilePage() {
 
     //Api request to return single character
     useEffect(() => {
-        axios.get(rickandmorty_url + id)
+        fetchCharacterById(id)
         .then(response => setCharacter(response.data))
         .catch(error => {
             throw new Error(error.message);
@@ -23,7 +22,7 @@ function CharacterProfilePage() {
         <div>
             {/* Character profile card detailed information */}
             <div className="nav-bar"></div>
-            <div className="character-profile">
+            <div className="character-profile" data-testid="character-detail-test">
               {console.log(character)}
               <img src={character.image} alt="Character image" />
               <p><strong>Name: </strong> {character.name}</p>
@@ -38,9 +37,9 @@ function CharacterProfilePage() {
               <p>{character.episode?.[character.episode?.length - 4 ]}</p>
               <p>{character.episode?.[character.episode?.length - 5 ]}</p>
             </div>
-            <Link to='/'> Return to main page</Link>
+            <BackHomeButton />
         </div>
     );
 }
 
-export default CharacterProfilePage;
+export default CharacterDetailCard;
