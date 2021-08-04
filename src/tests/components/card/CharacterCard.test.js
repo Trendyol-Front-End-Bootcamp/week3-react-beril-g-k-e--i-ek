@@ -1,7 +1,7 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import CharacterCard from '../../../components/CharacterCard';
 import { BrowserRouter } from 'react-router-dom';
-import React from 'react';
 
 const character = [{
     "id": 1,
