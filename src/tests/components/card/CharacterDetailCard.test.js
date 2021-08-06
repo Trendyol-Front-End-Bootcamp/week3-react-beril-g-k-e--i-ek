@@ -3,6 +3,8 @@ import { render, screen } from '@testing-library/react';
 import CharacterDetailCard from '../../../components/CharacterDetailCard';
 import { BrowserRouter } from 'react-router-dom';
 
+//Renders the character detail card 
+
 const character = [{
     "id": 1,
     "name": "Rick Sanchez",
@@ -32,7 +34,7 @@ const character = [{
 }
 ]
 
-const CharacterMock = () => {
+const CharacterDetailMock = () => {
     return (
         <BrowserRouter>
             <CharacterDetailCard  key={character.id} character={character}/>
@@ -43,7 +45,7 @@ const CharacterMock = () => {
 describe("CharacterDetailCard Test", () => {
     it('should render character detail card', async () => {
         render( 
-            <CharacterMock/>
+            <CharacterDetailMock/>
         );
         const charDetailCard = await screen.findAllByTestId(`character-detail-test`);
         expect(charDetailCard).toBeTruthy();

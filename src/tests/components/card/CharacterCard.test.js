@@ -3,6 +3,8 @@ import { render, screen } from '@testing-library/react';
 import CharacterCard from '../../../components/CharacterCard';
 import { BrowserRouter } from 'react-router-dom';
 
+//Renders the character card 
+
 const character = [{
     "id": 1,
     "name": "Rick Sanchez",

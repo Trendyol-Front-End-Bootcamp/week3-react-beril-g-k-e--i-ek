@@ -4,6 +4,8 @@ import Adapter from 'enzyme-adapter-react-16';
 import { BrowserRouter as Router} from 'react-router-dom';
 import CharacterCard from '../../../components/CharacterCard';
 
+//When you click on the character cards on the homepage, the pathname changes
+
 const character = {
     id: 1,
     name: "Rick Sanchez",

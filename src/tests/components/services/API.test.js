@@ -1,6 +1,7 @@
 import { fetchFilterData, fetchCharacterById } from "../../../services/API";
 
 describe("API Test", () => {
+    //Related data is returned from API when filters are selected
     it("should be return related data after filtered api request", async() => {
         const status = "dead";
         const species = "human";
@@ -12,6 +13,7 @@ describe("API Test", () => {
         expect(filteredData.data.results[0].species).toBe("Human");
     });
 
+    //When going to the detail page of the selected character, only the data of that character is returned from the API
     it("should be return related character data when request by character id", async() => {
         const characterId = "1";
         const characterData = await fetchCharacterById(characterId);

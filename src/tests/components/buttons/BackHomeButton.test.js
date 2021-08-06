@@ -3,6 +3,8 @@ import { render , fireEvent} from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import BackHomeButton from '../../../components/BackHomeButton';
 
+//Returns to the main page when you click on the back to home page
+
 describe("BackHomeButton Test", () => {
     it("should return homepage when click the back homepage button", () => {
         const { getByText } = render(
