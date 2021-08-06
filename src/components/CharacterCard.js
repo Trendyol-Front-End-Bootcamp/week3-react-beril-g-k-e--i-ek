@@ -8,7 +8,6 @@ export default function CharacterCard({character}){
         <div id="character-card" className="character-profile">
                 <img src={character.image} alt="Character"/>
                 <p>{character.name}</p>
-            
             <p><strong>Gender: </strong>{character.gender}</p>
             <p><strong>Status: </strong>{character.status}</p>
             <p><strong>Species: </strong>{character.species}</p>

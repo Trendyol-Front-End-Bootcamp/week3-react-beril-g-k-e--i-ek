@@ -34,7 +34,7 @@ const character = [{
 const CharacterMock = () => {
     return (
         <BrowserRouter>
-            <CharacterCard  key={character.id} character={character}/>
+            <CharacterCard key={character.id} character={character}/>
         </BrowserRouter>
     )
 }
