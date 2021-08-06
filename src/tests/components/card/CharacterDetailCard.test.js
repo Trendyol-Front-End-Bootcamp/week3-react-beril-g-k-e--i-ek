@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import CharacterDetailCard from '../../../components/CharacterDetailCard';
+import CharacterDetailCard from '../../../components/CharacterDetailPage/CharacterDetailCard';
 import { BrowserRouter } from 'react-router-dom';
 
 //Renders the character detail card 

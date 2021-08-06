@@ -2,7 +2,7 @@ import React from 'react';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { BrowserRouter as Router} from 'react-router-dom';
-import CharacterCard from '../../../components/CharacterCard';
+import CharacterCard from '../../../components/HomePage/CharacterCard';
 
 //When you click on the character cards on the homepage, the pathname changes
 

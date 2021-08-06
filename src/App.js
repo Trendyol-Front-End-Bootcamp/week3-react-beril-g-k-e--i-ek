@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import Homepage from './components/Homepage';
-import CharacterCard from './components/CharacterDetailCard';
+import Homepage from './components/HomePage/Homepage';
+import CharacterCard from './components/CharacterDetailPage/CharacterDetailCard';
 import { BrowserRouter as  Router, Switch, Route } from "react-router-dom";
 
 function App() {

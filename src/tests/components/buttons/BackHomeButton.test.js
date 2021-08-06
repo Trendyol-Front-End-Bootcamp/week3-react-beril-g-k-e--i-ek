@@ -1,7 +1,7 @@
 import React from 'react';
 import { render , fireEvent} from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import BackHomeButton from '../../../components/BackHomeButton';
+import BackHomeButton from '../../../components/CharacterDetailPage/BackHomeButton';
 
 //Returns to the main page when you click on the back to home page
 

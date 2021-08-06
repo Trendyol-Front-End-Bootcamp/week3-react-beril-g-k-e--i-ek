@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import CharacterCard from "./CharacterCard";
-import { fetchFilterData } from "../services/API";
-import Header from "./Header";
+import { fetchFilterData } from "../../services/API";
+import Header from "../Header/Header";
+import "./Homepage.css";
 
 export default function GetCharactersFromApi() {
 

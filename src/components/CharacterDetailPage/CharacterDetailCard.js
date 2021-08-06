@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import BackHomeButton from './BackHomeButton';
-import { fetchCharacterById } from "../services/API";
+import { fetchCharacterById } from "../../services/API";
+import "../Header/Header.css";
+import "./CharacterDetailPage.css";
 
 function CharacterDetailCard() {
     //Id of selected character
@@ -21,9 +23,8 @@ function CharacterDetailCard() {
     return (
         <div>
             {/* Character profile card detailed information */}
-            <div className="nav-bar"></div>
+            <div className="header"></div>
             <div className="character-profile" data-testid="character-detail-test">
-              {console.log(character)}
               <img src={character.image} alt="Character image" />
               <p><strong>Name: </strong> {character.name}</p>
               <p><strong>Status: </strong> {character.status}</p>

@@ -37,50 +37,5 @@
   }
 }
 
-.character-profile {
-  box-shadow: 0 4px 8px 0 black;
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-  display: block;
-  float: left;
-  margin: 15px;
-  background-color: white;
-}
 
-.character-profile-card{
-  box-shadow: 0 4px 8px 0 black;
-  max-width: 600px;
-  max-height: 800px;
-  margin: auto;
-  text-align: center;
-  display: block;
-  float: left;
-  margin: 15px;
-  background-color: white;
-}
 
-.nav-bar {
-  height: 200px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  background-image: url("./img/header-image.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.nav-bar h1 {
-  color:white;
-  margin: 0px;
-}
-
-.filter-button {
-  margin-left: 5px;
-}
-
-.filter-buttons {
-  display: inline-block;
-  margin-left: 80px;
-}

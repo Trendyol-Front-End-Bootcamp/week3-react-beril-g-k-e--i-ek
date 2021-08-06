@@ -1,0 +1,19 @@
+.character-profile {
+    box-shadow: 0 4px 8px 0 black;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    display: block;
+    float: left;
+    margin: 15px;
+    background-color: white;
+}
+  
+.filter-button {
+    margin-left: 5px;
+}
+  
+.filter-buttons {
+    display: inline-block;
+    margin-left: 80px;
+}
